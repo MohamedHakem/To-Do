@@ -19,6 +19,16 @@ document.getElementById('add').addEventListener('click', function() {
   }
 });
 
+
+// User pressed the Enter key on keyboard
+document.body.onkeyup = function(e) {
+  var value = document.getElementById('item').value;
+  if (e.keyCode == 13) {
+    addItem(value);
+  }
+};
+
+
 document.getElementById('item').addEventListener('keydown', function (e) {
   var value = this.value;
   if ((e.code === 'Enter' || e.code === 'NumpadEnter') && value) {
